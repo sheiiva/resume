@@ -1,9 +1,9 @@
 ######################################################
 #                                                    #
 #                Corentin COUTRET-ROZET              #
-#                 --------------------               #
+#                   ________________                 #
 #                                                    #
-# 		Github: https://github.com/sheiiva/resume    #
+# Github: https://github.com/sheiiva/resume          #
 #                                                    #
 ######################################################
 
@@ -20,5 +20,4 @@ restart:
 build:
 	sudo docker-compose build
 
-logs-client:
-	sudo docker logs web
+.PHONY: up down restart build
