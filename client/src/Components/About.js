@@ -7,6 +7,9 @@ class About extends Component {
       var name = this.props.data.name;
       var profilepic= "images/"+this.props.data.image;
       var bio = this.props.data.bio;
+      var driving = this.props.data.driving;
+      var age = this.props.data.age;
+      var nationality = this.props.data.nationality;
       var street = this.props.data.address.street;
       var city = this.props.data.address.city;
       var state = this.props.data.address.state;
@@ -20,12 +23,9 @@ class About extends Component {
       <section id="about">
       <div className="row">
          <div className="three columns">
-            <img className="profile-pic"  src={profilepic} alt="Tim Baker Profile Pic" />
+            <img className="profile-pic"  src={profilepic} alt="Corentin ROZET profile picture" />
          </div>
          <div className="nine columns main-col">
-            <h2>About Me</h2>
-
-            <p>{bio}</p>
             <div className="row">
                <div className="columns contact-details">
                   <h2>Contact Details</h2>
@@ -44,6 +44,15 @@ class About extends Component {
                   </p>
                </div>
             </div>
+
+            <h2>____</h2>
+            <span>{nationality}</span><br />
+            <span>{age}</span><br />
+            <span>{driving}</span><br />
+            <br />
+
+            <h2>About Me</h2>
+            <p>{bio}</p>
          </div>
       </div>
 
