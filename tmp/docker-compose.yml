@@ -1,0 +1,13 @@
+version: '3' 
+services:
+  web:
+    container_name: myserver
+    build:
+      context: ./phpapache
+    volumes:
+      - ./certificates:/etc/apache2/ssl_keys
+      - ./phpapache/html:/var/www/html
+    tty: true
+    ports:
+      - "80:80"
+      - "443:443"
