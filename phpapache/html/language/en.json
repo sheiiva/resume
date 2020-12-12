@@ -1,4 +1,5 @@
 {
-    "hello": "Hello",
-    "name": "Jack"
+    "en":"English",
+    "fr":"French",
+    "es":"Spanish"
 }

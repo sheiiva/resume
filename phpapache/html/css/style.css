@@ -1,0 +1,125 @@
+/*
+* =================================================================== 
+ *
+ * Style Configuration
+ *
+ * Copyright (c) 2020 Corentin ROZET
+ *
+ *  ------------------------------------------------------------------
+ *
+ *  TOC:
+ *  01. imports
+ *  02. nav
+ *
+ * =================================================================== 
+ */
+
+
+/** 
+* ===================================================================
+* 0x. General imports
+*
+* ------------------------------------------------------------------- 
+*/
+
+@import url(https://necolas.github.io/normalize.css/8.0.1/normalize.css);
+
+/** 
+ * ===================================================================
+ * 0x. Base style overrides
+ *
+ * ------------------------------------------------------------------- 
+ */
+
+html {
+    font-size: 10px;
+    height: 100%;
+}
+body {
+	background: #151515;
+	font-family: "lora-regular", serif;
+	font-size: 1.7rem;
+	line-height: 3rem;
+    color: #6e6e6e;
+    height: 100%;
+    background-color: white;
+}
+* {
+    box-sizing: border-box;
+}
+
+/** 
+* ===================================================================
+* 0x. Navigation Menu
+*
+* ------------------------------------------------------------------- 
+*/
+
+nav {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+}
+.selected-lang {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    line-height: 2;
+    width: 100px;
+}
+.selected-lang:before {
+    content: '';
+    display: block;
+    width: 32px;
+    height: 32px;
+    background-image: url("https://www.countryflags.io/us/flat/32.png");
+}
+.lang-menu {
+    position: relative;
+}
+.lang-menu:hover ul{
+    display: block;
+}
+.lang-menu ul {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    border: 1px solid #f8f8f8;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.lang-menu ul li {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+.lang-menu ul li a {
+    width: 140px;
+    display: block;
+    padding: 5px 10px;
+    text-decoration: none;
+}
+.lang-menu ul li a::before{
+    content: '';
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.lang-menu ul li a:hover {
+    background-color: #f2f2f2;
+}
+/* LANGUAGE */
+#en:before {
+    background-image: url("https://www.countryflags.io/us/flat/32.png");
+}
+#fr:before {
+    background-image: url("https://www.countryflags.io/fr/flat/32.png");
+}
+#es:before {
+    background-image: url("https://www.countryflags.io/es/flat/32.png");
+}

@@ -3,10 +3,10 @@
  * javascript languages scripts
  *
  * ------------------------------------------------------------------- 
- */
-
-/* Copyright (c) 2020 Corentin ROZET
+ *
+ * Copyright (c) 2020 Corentin ROZET
  * 2020-11-12
+ *
  */
 
 var language;

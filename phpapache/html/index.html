@@ -1,3 +1,4 @@
+<!-- Copyright (c) 2020 Corentin ROZET -->
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 
@@ -6,7 +7,7 @@
    <!--- basic page needs
    ================================================== -->
    <meta charset="utf-8">
-   <title>Corentin ROZET</title>
+   <title>Corentin ROZET - Resume</title>
    <meta name="description" content="Hi, I'm Corentin ROZET. Here you can find me online reseume">  
    <meta name="author" content="">
 
@@ -35,11 +36,26 @@
 
 <body>
    
-   <a href="#en" onclick="setLanguage('en')">English</a>
-   <a href="#fr" onclick="setLanguage('fr')">French</a>
-   
-   <h1 id="hello"></h1>
-   <h2 id="name"></h2>
+   <header>
+      <nav>
+         <div class="lang-menu">
+            <div class="selected-lang">
+               English
+            </div>
+            <ul>
+               <li>
+                  <a id="en" href="#en" onclick="setLanguage('en')"></a>
+               </li>
+               <li>
+                  <a id="fr" href="#fr" onclick="setLanguage('fr')"></a>
+               </li>
+               <li>
+                  <a id="es" href="#es" onclick="setLanguage('es')"></a>
+               </li>
+            </ul>
+         </div>
+      </nav>
+   </header>
 
 </body>
 
