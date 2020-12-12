@@ -114,12 +114,12 @@ nav {
     background-color: #f2f2f2;
 }
 /* LANGUAGE */
-#en:before {
+#us::before {
     background-image: url("https://www.countryflags.io/us/flat/32.png");
 }
-#fr:before {
+#fr::before {
     background-image: url("https://www.countryflags.io/fr/flat/32.png");
 }
-#es:before {
+#es::before {
     background-image: url("https://www.countryflags.io/es/flat/32.png");
 }
