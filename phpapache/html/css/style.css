@@ -59,14 +59,14 @@ nav {
     font-family: 'Montserrat', sans-serif;
     display: flex;
 }
-.selected-lang {
+#selected-lang {
     cursor: pointer;
     display: flex;
     justify-content: space-between;
     line-height: 2;
     width: 100px;
 }
-.selected-lang:before {
+#selected-lang:before {
     content: '';
     display: block;
     width: 32px;
