@@ -62,6 +62,7 @@ a:hover, a:focus, a:active {
 
 .lang-menu {
     right: 50px;
+    margin-top: 10px;
     position: absolute;
 }
 .lang-menu:hover ul{
