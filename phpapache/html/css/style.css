@@ -34,19 +34,23 @@
 
 html {
     font-size: 10px;
-    height: 100%;
+}
+html, body {
+	height: 100%;
 }
 body {
-	background: #151515;
-	font-family: "lora-regular", serif;
+    font-family: 'Montserrat', sans-serif;
+	background:black;
 	font-size: 1.7rem;
 	line-height: 3rem;
-    color: #6e6e6e;
-    height: 100%;
-    background-color: white;
+	color: #6e6e6e;
 }
 * {
     box-sizing: border-box;
+}
+a:hover, a:focus, a:active {
+	color: #7c5295;
+	outline: 0;
 }
 
 /** 
@@ -56,26 +60,9 @@ body {
 * ------------------------------------------------------------------- 
 */
 
-nav {
-    font-family: 'Montserrat', sans-serif;
-    display: flex;
-}
-#selected-lang {
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    line-height: 2;
-    width: 100px;
-}
-#selected-lang:before {
-    content: '';
-    display: block;
-    width: 32px;
-    height: 32px;
-    background-image: url("https://www.countryflags.io/us/flat/32.png");
-}
 .lang-menu {
-    position: relative;
+    right: 50px;
+    position: absolute;
 }
 .lang-menu:hover ul{
     display: block;
@@ -83,8 +70,8 @@ nav {
 .lang-menu ul {
     margin: 0;
     padding: 0;
-    background-color: white;
-    border: 1px solid #f8f8f8;
+    background-color: #f2f2f2;
+    border: 1px solid #bca0dc;
     box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     display: none;
@@ -101,6 +88,7 @@ nav {
     width: 140px;
     display: block;
     padding: 5px 10px;
+    color: #663a82;
     text-decoration: none;
 }
 .lang-menu ul li a::before{
@@ -112,7 +100,22 @@ nav {
     margin-right: 5px;
 }
 .lang-menu ul li a:hover {
-    background-color: #f2f2f2;
+    color: #3c1361;
+    background-color: #bca0dc;
+}
+#selected-lang {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    line-height: 2;
+    width: 100px;
+}
+#selected-lang:before {
+    content: '';
+    display: block;
+    width: 32px;
+    height: 32px;
+    background-image: url("https://www.countryflags.io/us/flat/32.png");
 }
 /* LANGUAGE */
 #us::before {
@@ -124,3 +127,10 @@ nav {
 #es::before {
     background-image: url("https://www.countryflags.io/es/flat/32.png");
 }
+
+/** 
+* ===================================================================
+* 0x. Footer
+*
+* ------------------------------------------------------------------- 
+*/
