@@ -1714,7 +1714,7 @@ header .logo a {
 	text-align: center;
 }
 #resume .resume-header h2 {
-	color: #FF0077;
+	color: #b491c8;
 }
 
 #resume .resume-timeline {
@@ -1765,6 +1765,7 @@ header .logo a {
 	text-align: right;
 }
 #resume .timeline-header h3 {
+	color: #7c5295;
 	margin-bottom: 0;
 }
 #resume .timeline-header p {
