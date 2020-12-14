@@ -81,5 +81,10 @@
     "stats-language":"Languages",
     "stats-language-informatic":"Informatic Languages",
     "stats-coffee":"Coffee cups",
-    "stats-associations":"Associations"
+    "stats-associations":"Associations",
+    "contact-contact":"Contact",
+    "contact-message":"I'd Love To Hear From You.",
+    "contact-submit":"Submit",
+    "contact-sending":"Sending...",
+    "contact-sent":"Your message was sent, thank you!"
 }
