@@ -76,6 +76,17 @@
     "resume-seej-company":"SEEJ",
     "resume-seej-place":"| Fouras, Francia",
     "resume-seej-description":"Animador en Centro de Vacaciones para niños de 3 a 11 años.",
+    "resume-volunteer":"Experiencia de voluntariado",
+    "resume-bde-title":"Community Manager",
+    "resume-bde-date":"Since August 2020",
+    "resume-bde-company":"Student Council",
+    "resume-bde-place":"| Barcelona, Spain",
+    "resume-bde-description":"Responsable de Comunidad y Comunicación del Consejo de Alumnos de Epitech España.",
+    "resume-emma-title":"Miembre",
+    "resume-emma-date":"Febrero 2019 - Noviembre 2019",
+    "resume-emma-company":"E-mma",
+    "resume-emma-place":"| Burdeos, Francia",
+    "resume-emma-description":"E-mma es una asociación que lucha por la diversidad de género en los campos digitales. Me introdujeron como gerente de desarrollo, haciendo networking y gestión de la comunidad.",
     "stats-project":"Proyectos realizados",
     "stats-job":"Empleos",
     "stats-language":"Idiomas",
@@ -92,4 +103,4 @@
     "contact-email-link":"corentin.rozet@epitech.eu",
     "contact-phone":"Por teléfono",
     "contact-phone-number":"Tel: (+33) 6 41 66 06 80"
-}volunteer experience
+}
