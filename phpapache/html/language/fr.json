@@ -81,5 +81,15 @@
     "stats-language":"Langues",
     "stats-language-informatic":"Langages Informatiques",
     "stats-coffee":"Cafés",
-    "stats-associations":"Associations"
+    "stats-associations":"Associations",
+    "contact-contact":"Contact",
+    "contact-message":"Contactez-moi!",
+    "contact-submit":"Envoyer",
+    "contact-sending":"En cours...",
+    "contact-sent":"Votre message a été envoyé, merci!",
+    "contact-findme":"Où me trouver",
+    "contact-email":"Me contacter",
+    "contact-email-link":"corentin.rozet@epitech.eu",
+    "contact-phone":"Me téléphoner",
+    "contact-phone-number":"Tel: (+33) 6 41 66 06 80"
 }

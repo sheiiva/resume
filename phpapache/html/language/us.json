@@ -86,5 +86,10 @@
     "contact-message":"I'd Love To Hear From You.",
     "contact-submit":"Submit",
     "contact-sending":"Sending...",
-    "contact-sent":"Your message was sent, thank you!"
+    "contact-sent":"Your message was sent, thank you!",
+    "contact-findme":"Where to find me",
+    "contact-email":"Email Me At",
+    "contact-email-link":"corentin.rozet@epitech.eu",
+    "contact-phone":"Call Me At",
+    "contact-phone-number":"Phone: (+33) 6 41 66 06 80"
 }
