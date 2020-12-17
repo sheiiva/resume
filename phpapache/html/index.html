@@ -604,44 +604,37 @@
 
    		<div class="col-twelve">
 
-            <!-- form -->
-            <form name="contactForm" id="contactForm" method="post" action="">
-      			<fieldset>
+			<!-- form -->
+			<form name="gform" method="post" data-email="corentin.rozet@epitech.eu"
+			   action="https://script.google.com/macros/s/AKfycbwIpeZgBSuV9GfqbThXhgt3_SuMlsnfjkrYzCIpCQ/exec">
+			   
+			   <div class="form-elements">
 
-                  <div class="form-field">
- 						   <input name="contactName" type="text" id="contactName" placeholder="Name" value="" minlength="2" required="">
-                  </div>
-                  <div class="form-field">
-	      			   <input name="contactEmail" type="email" id="contactEmail" placeholder="Email" value="" required="">
-	               </div>
-                  <div class="form-field">
-	     				   <input name="contactSubject" type="text" id="contactSubject" placeholder="Subject" value="">
-	               </div>                       
-                  <div class="form-field">
-	                 	<textarea name="contactMessage" id="contactMessage" placeholder="Message" rows="10" cols="50" required=""></textarea>
-	               </div>
-                 <div class="form-field">
-                     <button class="submitform"><span id="contact-submit"></span></button>
-                     <div id="submit-loader">
-                        <div class="text-loader"><span id="contact-sending"></span></div>                             
-       				    	<div class="s-loader">
-								<div class="bounce1"></div>
-								<div class="bounce2"></div>
-								<div class="bounce3"></div>
-							</div>
-						</div>
-                  </div>
+					<fieldset class="pure-group">
+						<input id="name" name="name" type="text" required placeholder="Name" />
+					</fieldset>
+					
+					<fieldset class="pure-group">
+						<input id="email" name="email" type="email" value="" required placeholder="Email" />
+					</fieldset>
 
-      			</fieldset>
-      		</form> <!-- Form End -->
+					<fieldset class="pure-group">
+						<textarea id="message" name="message" rows=10 required placeholder="Message"></textarea>
+					</fieldset>
 
-            <!-- contact-warning -->
-            <div id="message-warning">            	
-            </div>            
-            <!-- contact-success -->
-      		<div id="message-success">
-               <i class="fa fa-check"></i><span id="contact-sent"></span><br>
-      		</div>
+					<button class="button-success pure-button button-xlarge">
+						<i class="fa fa-paper-plane"></i>&nbsp;Send</button>
+					</div>
+
+				</div> <!-- form-elements -->
+
+				<!-- Customise the Thankyou Message People See when they submit the form: -->
+				<div class="thankyou_message" style="display:none;">
+					<h2><em>Thanks</em> for contacting us!
+					We will get back to you soon!</h2>
+				</div>
+
+			</form> <!-- Form End -->
 
          </div> <!-- /col-twelve -->
    		
