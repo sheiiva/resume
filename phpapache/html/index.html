@@ -605,7 +605,8 @@
    		<div class="col-twelve">
 
 			<!-- form -->
-			<form name="gform" method="post" data-email="corentin.rozet@epitech.eu"
+
+			<form class="gform pure-form pure-form-stacked" method="POST" data-email="corentin.rozet@epitech.eu"
 			   action="https://script.google.com/macros/s/AKfycbwIpeZgBSuV9GfqbThXhgt3_SuMlsnfjkrYzCIpCQ/exec">
 			   
 			   <div class="form-elements">
@@ -622,16 +623,20 @@
 						<textarea id="message" name="message" rows=10 required placeholder="Message"></textarea>
 					</fieldset>
 
+					<fieldset class="pure-group honeypot-field">
+						<label for="honeypot">To help avoid spam, utilize a Honeypot technique with a hidden text field; must be empty to submit the form! Otherwise, we assume the user is a spam bot.</label>
+						<input id="honeypot" type="text" name="honeypot" value="" />
+					</fieldset>
+
 					<button class="button-success pure-button button-xlarge">
 						<i class="fa fa-paper-plane"></i>&nbsp;Send</button>
 					</div>
 
 				</div> <!-- form-elements -->
 
-				<!-- Customise the Thankyou Message People See when they submit the form: -->
-				<div class="thankyou_message" style="display:none;">
-					<h2><em>Thanks</em> for contacting us!
-					We will get back to you soon!</h2>
+				<div style="display:none" class="thankyou_message">
+					<h2><em>Thanks</em> for contacting us! We will get back to you soon!
+					</h2>
 				</div>
 
 			</form> <!-- Form End -->
@@ -722,9 +727,10 @@
 
    <!-- Java Script
    ================================================== --> 
-   <script src="js/jquery-2.1.3.min.js"></script>
-   <script src="js/plugins.js"></script>
-   <script src="js/main.js"></script>
+   <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+   <script type="text/javascript" src="js/plugins.js"></script>
+   <script type="text/javascript" src="js/main.js"></script>
+   <script data-cfasync="false" type="text/javascript" src="js/form-submission-handler.js"></script>
 
 </body>
 

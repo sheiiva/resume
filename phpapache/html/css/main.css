@@ -2513,6 +2513,9 @@ header .logo a {
 .contact-info h5 {
 	color: #7c5295;
 }
+.honeypot-field {
+	display: none;
+}
 
 /**
  * loader animation - (_layout.scss)
