@@ -20,4 +20,7 @@ restart:
 build:
 	sudo docker-compose build
 
-.PHONY: up down restart build
+clean_all:
+	docker system prune -fa
+
+.PHONY: up down restart build clean_all
