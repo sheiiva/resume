@@ -77,6 +77,13 @@ body {
 	color: #6e6e6e;
 }
 
+.languages-list .lang-flag {
+	width: 18px;
+	height: auto;
+	margin-right: 6px;
+	vertical-align: text-bottom;
+}
+
 /**
  * links - (_document-setup.scss)
  * -------------------------------------------------------------------
