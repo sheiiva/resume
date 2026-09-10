@@ -13,13 +13,14 @@
 
 	<!-- mobile specific metas
 	================================================== -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	 <!-- CSS
 	================================================== -->
 	<link rel="stylesheet" href="css/base.css">
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/vendor.css">
+	<link rel="stylesheet" href="css/a11y.css">
 
 	<!-- script
 	================================================== -->
@@ -34,13 +35,15 @@
 
 <body id="top">
 
+	<a class="skip-link" href="#about">Skip to content</a>
+
 	<!-- header
 	================================================== -->
 	<header>
 		<div class="row">
 
 			<div class="top-bar">
-				<a class="menu-toggle" href="#"><span></span></a>
+				<a class="menu-toggle" href="#" aria-label="Open menu"><span></span></a>
 
 				<div class="logo">
 				 <a href="index.html">MENU</a>
@@ -91,8 +94,8 @@
 		</div> <!-- /intro-content -->
 
 		<ul class="intro-social">
-		<li><a href="https://www.linkedin.com/in/corentin-coutret-rozet/"><i class="fa fa-linkedin"></i></a></li>
-		<li><a href="https://github.com/sheiiva"><i class="fa fa-github"></i></a></li>
+		<li><a href="https://www.linkedin.com/in/corentin-coutret-rozet/" aria-label="LinkedIn profile"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+		<li><a href="https://github.com/sheiiva" aria-label="GitHub profile"><i class="fa fa-github" aria-hidden="true"></i></a></li>
 	</ul> <!-- /intro-social -->
 
 	</section> <!-- /intro -->
@@ -433,31 +436,33 @@
 				<div class="form-elements">
 
 					<fieldset class="pure-group">
-						<input id="name" name="name" type="text" required placeholder="Name" />
+						<label class="field-label" for="name">Name <span class="required-mark" aria-hidden="true">*</span></label>
+						<input id="name" name="name" type="text" required autocomplete="name" placeholder="Your name" aria-required="true" />
 					</fieldset>
 
 					<fieldset class="pure-group">
-						<input id="email" name="email" type="email" value="" required placeholder="Email" />
+						<label class="field-label" for="email">Email <span class="required-mark" aria-hidden="true">*</span></label>
+						<input id="email" name="email" type="email" value="" required autocomplete="email" placeholder="you@company.com" aria-required="true" />
 					</fieldset>
 
 					<fieldset class="pure-group">
-						<textarea id="message" name="message" rows=10 required placeholder="Message"></textarea>
+						<label class="field-label" for="message">Message <span class="required-mark" aria-hidden="true">*</span></label>
+						<textarea id="message" name="message" rows="8" required placeholder="What do you need help with? (pack, stack, timeline…)" aria-required="true"></textarea>
 					</fieldset>
 
-					<fieldset class="pure-group honeypot-field">
-						<label for="honeypot">To help avoid spam, utilize a Honeypot technique with a hidden text field; must be empty to submit the form! Otherwise, we assume the user is a spam bot.</label>
-						<input id="honeypot" type="text" name="honeypot" value="" />
+					<fieldset class="pure-group honeypot-field" aria-hidden="true">
+						<label for="honeypot">Leave blank</label>
+						<input id="honeypot" type="text" name="honeypot" value="" tabindex="-1" autocomplete="off" />
 					</fieldset>
 
-					<button class="button-success pure-button button-xlarge">
-						<i class="fa fa-paper-plane"></i>&nbsp;<span id="form-send">Send</span></button>
-					</div>
+					<button type="submit" class="submitform button-success">
+						<i class="fa fa-paper-plane" aria-hidden="true"></i>&nbsp;<span id="form-send">Send</span>
+					</button>
 
 				</div> <!-- form-elements -->
 
-				<div style="display:none" class="thankyou_message">
-					<h2><em>Thanks</em> for your message! I'll get back to you soon.
-					</h2>
+				<div style="display:none" class="thankyou_message" role="status" aria-live="polite">
+					<h2><em>Thanks</em> for your message! I'll get back to you soon.</h2>
 				</div>
 
 			</form> <!-- Form End -->
@@ -506,8 +511,8 @@
 			 <div class="col-six tab-full pull-right social">
 
 				 <ul class="footer-social">
-					<li><a href="https://www.linkedin.com/in/corentin-coutret-rozet/"><i class="fa fa-linkedin"></i></a></li>
-					<li><a href="https://github.com/sheiiva"><i class="fa fa-github"></i></a></li>
+					<li><a href="https://www.linkedin.com/in/corentin-coutret-rozet/" aria-label="LinkedIn profile"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+					<li><a href="https://github.com/sheiiva" aria-label="GitHub profile"><i class="fa fa-github" aria-hidden="true"></i></a></li>
 				</ul>
 
 		  </div>

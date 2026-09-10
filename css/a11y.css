@@ -1,0 +1,288 @@
+/**
+ * Accessibility & readability overrides (WCAG-oriented)
+ * Loaded after main.css / vendor.css
+ */
+
+/* Allow pinch-zoom (viewport also updated in HTML) */
+html {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+/* Stronger default text on light surfaces */
+body {
+	color: #4a4a4a;
+}
+
+.grey-section p.lead,
+#about p.lead,
+#portfolio p.lead {
+	color: #555555;
+}
+
+/* Dark sections: lighter body text */
+#intro,
+#services,
+#contact,
+footer {
+	color: #d0d0d0;
+}
+
+#services .section-intro p,
+#contact .section-intro p {
+	color: rgba(255, 255, 255, 0.85);
+}
+
+/* Section eyebrows: readable purple on dark */
+#services .section-intro h5,
+#contact .section-intro h5,
+.contact-info h5 {
+	color: #c4a3d8;
+}
+
+/* Links: keep high contrast; purple hover still ok on light */
+a, a:visited {
+	color: #1a1a1a;
+}
+#services a,
+#contact a,
+footer a,
+#intro a {
+	color: #e8d5f5;
+}
+a:hover, a:focus, a:active,
+#services a:hover, #services a:focus,
+#contact a:hover, #contact a:focus,
+footer a:hover, footer a:focus {
+	color: #7c5295;
+}
+
+/* Keyboard focus: never remove without replacement */
+a:focus-visible,
+button:focus-visible,
+.button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+.menu-toggle:focus-visible {
+	outline: 2px solid #b491c8;
+	outline-offset: 3px;
+}
+
+.button:focus,
+button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:focus,
+a.button:focus {
+	outline: 2px solid #b491c8;
+	outline-offset: 3px;
+}
+
+/* Stroke buttons on dark intro */
+#intro .button.stroke {
+	border-color: rgba(255, 255, 255, 0.85);
+	color: #ffffff;
+}
+#intro .button.stroke:hover,
+#intro .button.stroke:focus {
+	border-color: #c4a3d8;
+	color: #c4a3d8;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Contact form                                                               */
+/* -------------------------------------------------------------------------- */
+
+#contact .contact-form {
+	max-width: 740px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#contact form.gform fieldset.pure-group {
+	border: 0;
+	margin: 0 0 2.4rem;
+	padding: 0;
+}
+
+#contact form.gform label.field-label {
+	display: block;
+	position: static;
+	font-family: "poppins-bold", sans-serif;
+	font-size: 1.3rem;
+	line-height: 1.4;
+	letter-spacing: 0.08rem;
+	text-transform: uppercase;
+	color: #e8e8e8;
+	background: transparent;
+	padding: 0;
+	margin: 0 0 0.8rem;
+}
+
+#contact form.gform label.field-label::after {
+	display: none;
+}
+
+#contact form.gform .required-mark {
+	color: #c4a3d8;
+	margin-left: 0.2rem;
+}
+
+#contact input[type="text"],
+#contact input[type="password"],
+#contact input[type="email"],
+#contact textarea {
+	width: 100%;
+	box-sizing: border-box;
+	color: #f2f2f2;
+	background: rgba(255, 255, 255, 0.06);
+	border: 1px solid rgba(255, 255, 255, 0.35);
+	border-radius: 6px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+	margin-bottom: 0;
+	padding: 1.4rem 1.6rem;
+	height: auto;
+	min-height: 5.2rem;
+	transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+#contact textarea {
+	min-height: 16rem;
+	resize: vertical;
+}
+
+#contact input[type="text"]:focus,
+#contact input[type="password"]:focus,
+#contact input[type="email"]:focus,
+#contact textarea:focus {
+	color: #ffffff;
+	background: rgba(255, 255, 255, 0.1);
+	border-color: #c4a3d8;
+	outline: 2px solid #b491c8;
+	outline-offset: 2px;
+}
+
+/* Brighter placeholders */
+#contact .contact-form ::-webkit-input-placeholder,
+.contact-form ::-webkit-input-placeholder {
+	color: rgba(255, 255, 255, 0.55);
+}
+#contact .contact-form :-moz-placeholder,
+.contact-form :-moz-placeholder {
+	color: rgba(255, 255, 255, 0.55);
+}
+#contact .contact-form ::-moz-placeholder,
+.contact-form ::-moz-placeholder {
+	color: rgba(255, 255, 255, 0.55);
+}
+#contact .contact-form :-ms-input-placeholder,
+.contact-form :-ms-input-placeholder {
+	color: rgba(255, 255, 255, 0.55);
+}
+#contact .contact-form ::placeholder {
+	color: rgba(255, 255, 255, 0.55);
+}
+
+/* Send button: solid purple primary */
+#contact button.submitform,
+#contact button.button-success,
+#contact .button-success {
+	display: block;
+	width: 100%;
+	font-family: "poppins-bold", sans-serif;
+	font-size: 1.5rem;
+	letter-spacing: 0.2rem;
+	text-transform: uppercase;
+	height: 6rem;
+	line-height: 6rem;
+	padding: 0 3rem;
+	margin-top: 1.2rem;
+	border: none;
+	border-radius: 6px;
+	background: #7c5295;
+	color: #ffffff;
+	cursor: pointer;
+	transition: background 0.2s ease, color 0.2s ease;
+}
+
+#contact button.submitform:hover,
+#contact button.submitform:focus,
+#contact button.button-success:hover,
+#contact button.button-success:focus,
+#contact .button-success:hover,
+#contact .button-success:focus {
+	background: #5e3d74;
+	color: #ffffff;
+	outline: 2px solid #b491c8;
+	outline-offset: 3px;
+}
+
+/* Thank-you state */
+#contact .thankyou_message h2 {
+	color: #ffffff;
+	font-size: 2.4rem;
+	line-height: 1.4;
+}
+#contact .thankyou_message em {
+	color: #c4a3d8;
+	font-style: normal;
+}
+
+/* Contact info text */
+.contact-info {
+	color: #d0d0d0;
+}
+.contact-info p {
+	color: #d0d0d0;
+}
+
+/* Honeypot: hide from everyone including AT when aria-hidden on parent */
+.honeypot-field {
+	display: none !important;
+	visibility: hidden;
+	position: absolute;
+	left: -9999px;
+}
+
+/* Skip link for keyboard users */
+.skip-link {
+	position: absolute;
+	left: -9999px;
+	top: 0;
+	z-index: 9999;
+	padding: 1rem 1.6rem;
+	background: #7c5295;
+	color: #fff;
+	font-family: "poppins-bold", sans-serif;
+	text-decoration: none;
+}
+.skip-link:focus {
+	left: 1rem;
+	top: 1rem;
+	outline: 2px solid #fff;
+	outline-offset: 2px;
+}
+
+/* Services cards on dark: ensure readable body */
+#services .about-content h3 {
+	color: #ffffff;
+}
+#services .about-content p {
+	color: #d0d0d0;
+}
+#services .about-content em {
+	color: #c4a3d8;
+}
+
+/* Prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
