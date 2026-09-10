@@ -727,57 +727,53 @@ header .menu-toggle {
 	width: auto !important;
 	height: auto !important;
 	margin: 0 !important;
-	padding: 1rem 1.6rem 1rem 1.4rem;
+	padding: 1rem 1.8rem 1rem 1.5rem;
 	border-radius: 999px;
-	background: rgba(21, 21, 21, 0.42);
-	border: 1px solid rgba(255, 255, 255, 0.2);
+	background: rgba(255, 255, 255, 0.92) !important;
+	border: 1px solid rgba(255, 255, 255, 0.95) !important;
 	-webkit-backdrop-filter: blur(12px);
 	backdrop-filter: blur(12px);
-	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+	color: #1a1a1a !important;
 	transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 header .menu-toggle:hover,
 header .menu-toggle:focus {
-	background: rgba(21, 21, 21, 0.62);
-	border-color: rgba(196, 163, 216, 0.55);
+	background: #ffffff !important;
+	border-color: #c4a3d8 !important;
+	color: #1a1a1a !important;
 }
 header .menu-toggle-label {
-	display: inline-block;
-	font-family: "poppins-medium", sans-serif;
-	font-size: 1.25rem;
-	line-height: 1;
-	letter-spacing: 0.12rem;
-	text-transform: uppercase;
-	color: #ffffff;
-	font: inherit;
-	text-shadow: none;
+	display: inline-block !important;
+	position: static !important;
+	font-family: "poppins-medium", sans-serif !important;
+	font-size: 1.35rem !important;
+	line-height: 1 !important;
+	letter-spacing: 0.14rem !important;
+	text-transform: uppercase !important;
+	color: #1a1a1a !important;
+	background: transparent !important;
+	width: auto !important;
+	height: auto !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	text-shadow: none !important;
 }
 
-/* Hamburger bars (only .menu-toggle-bars — not the label) */
-header .menu-toggle span {
-	/* reset theme rules that target every span */
-	background: transparent !important;
-	width: auto;
-	height: auto;
-	margin: 0;
-	position: static;
-	font: inherit;
-	color: inherit;
-	text-shadow: none;
-}
-header .menu-toggle span::before,
-header .menu-toggle span::after {
-	content: none !important;
-	display: none !important;
-}
+/* Hamburger bars only — do not style the label span */
 header .menu-toggle-bars {
 	display: block !important;
 	position: relative !important;
 	width: 18px !important;
 	height: 2px !important;
-	background-color: #c4a3d8 !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	background-color: #7c5295 !important;
 	border-radius: 2px;
 	flex: 0 0 auto;
+	font: 0/0 a !important;
+	color: transparent !important;
+	text-shadow: none !important;
 }
 header .menu-toggle-bars::before,
 header .menu-toggle-bars::after {
@@ -787,12 +783,13 @@ header .menu-toggle-bars::after {
 	left: 0 !important;
 	width: 100% !important;
 	height: 100% !important;
-	background-color: #c4a3d8 !important;
+	background-color: #7c5295 !important;
 	border-radius: 2px;
 	transition: transform 0.2s ease, top 0.2s ease, bottom 0.2s ease;
 }
 header .menu-toggle-bars::before {
 	top: -6px !important;
+	bottom: auto !important;
 }
 header .menu-toggle-bars::after {
 	bottom: -6px !important;
@@ -817,7 +814,7 @@ header #main-nav-wrap {
 	width: min(26rem, calc(100vw - 3rem));
 }
 header .main-navigation {
-	background: rgba(21, 21, 21, 0.92) !important;
+	background: rgba(21, 21, 21, 0.94) !important;
 	border: 1px solid rgba(255, 255, 255, 0.14);
 	border-radius: 12px;
 	padding: 1.2rem 1.6rem 1.6rem !important;
@@ -828,10 +825,15 @@ header .main-navigation {
 header .main-navigation li a {
 	padding: 1rem 0.4rem !important;
 	border-radius: 6px;
+	color: #ffffff !important;
 }
 header .main-navigation li a:hover {
 	padding-left: 0.8rem !important;
 	background: rgba(124, 82, 149, 0.18);
+	color: #c4a3d8 !important;
+}
+header .main-navigation li.current > a {
+	color: #c4a3d8 !important;
 }
 
 @media only screen and (max-width: 600px) {
@@ -840,7 +842,7 @@ header .main-navigation li a:hover {
 		top: 1.2rem !important;
 	}
 	header .menu-toggle {
-		padding: 0.9rem 1.3rem 0.9rem 1.2rem;
+		padding: 0.9rem 1.4rem 0.9rem 1.2rem;
 	}
 }
 
