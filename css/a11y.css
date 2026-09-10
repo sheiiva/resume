@@ -723,12 +723,13 @@ header .menu-toggle {
 	float: none;
 	display: inline-flex !important;
 	align-items: center;
-	gap: 1rem;
+	justify-content: center;
+	gap: 0.9rem;
 	width: auto !important;
 	height: auto !important;
 	min-height: 4.4rem;
 	margin: 0 !important;
-	padding: 1rem 1.8rem 1rem 1.5rem;
+	padding: 1rem 1.6rem;
 	border-radius: 999px;
 	background: rgba(255, 255, 255, 0.95) !important;
 	border: 1px solid rgba(255, 255, 255, 0.95) !important;
@@ -753,7 +754,9 @@ header .menu-toggle-label {
 	font-family: "poppins-medium", sans-serif !important;
 	font-size: 1.35rem !important;
 	line-height: 1 !important;
-	letter-spacing: 0.14rem !important;
+	letter-spacing: 0.12rem !important;
+	/* letter-spacing adds space after the last glyph — pull it back so the word looks centered */
+	margin-inline-end: -0.12rem;
 	text-transform: uppercase !important;
 	color: #1a1a1a !important;
 	background: transparent !important;
@@ -859,7 +862,7 @@ header .main-navigation li.current > a {
 		top: 1.2rem !important;
 	}
 	header .menu-toggle {
-		padding: 0.9rem 1.4rem 0.9rem 1.2rem;
+		padding: 0.9rem 1.35rem;
 	}
 }
 
