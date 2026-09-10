@@ -275,23 +275,47 @@ a.button:focus {
 	color: #c4a3d8;
 }
 
-/* Services: 2x2 readable cards instead of 4 skinny columns */
+/* Services: even 2x2 grid (equal gaps, equal card stretch) */
+#services .section-intro {
+	max-width: 900px;
+}
 #services .services-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 2.4rem;
 	max-width: 980px;
 	margin-left: auto;
 	margin-right: auto;
+	align-items: stretch;
+}
+#services .services-grid:before,
+#services .services-grid:after {
+	display: none !important;
+	content: none !important;
+}
+#services .services-grid > .col-six,
+#services .services-grid > .service-card {
+	float: none !important;
+	width: auto !important;
+	max-width: none !important;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+	margin: 0 !important;
+	clear: none !important;
 }
 #services .service-card {
-	margin-bottom: 2.8rem;
-	padding: 2rem 2.4rem;
-	background: rgba(255, 255, 255, 0.04);
-	border: 1px solid rgba(255, 255, 255, 0.12);
-	border-radius: 8px;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
 	box-sizing: border-box;
+	padding: 2.4rem 2.6rem !important;
+	background: rgba(255, 255, 255, 0.04);
+	border: 1px solid rgba(255, 255, 255, 0.14);
+	border-radius: 8px;
 }
 #services .service-card h3 {
 	margin-top: 0;
-	margin-bottom: 1rem;
+	margin-bottom: 1.2rem;
 	font-size: 1.8rem;
 	line-height: 1.3;
 	letter-spacing: 0.06rem;
@@ -302,12 +326,16 @@ a.button:focus {
 	margin-bottom: 1rem;
 }
 #services .service-card p:last-child {
+	margin-top: auto;
 	margin-bottom: 0;
 }
 @media only screen and (max-width: 768px) {
+	#services .services-grid {
+		grid-template-columns: 1fr;
+		gap: 1.8rem;
+	}
 	#services .service-card {
-		padding: 1.6rem 1.8rem;
-		margin-bottom: 1.8rem;
+		padding: 2rem 2rem !important;
 	}
 }
 
