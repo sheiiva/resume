@@ -704,6 +704,146 @@ a.button:focus {
 	}
 }
 
+/* -------------------------------------------------------------------------- */
+/* Header menu: soft pill instead of black rectangle                          */
+/* -------------------------------------------------------------------------- */
+header .logo {
+	display: none !important;
+}
+header .top-bar {
+	background: transparent !important;
+	min-width: 0 !important;
+	min-height: 0 !important;
+	left: 2rem !important;
+	top: 1.6rem !important;
+	right: auto;
+	padding: 0;
+}
+header .menu-toggle {
+	float: none;
+	display: inline-flex !important;
+	align-items: center;
+	gap: 1rem;
+	width: auto !important;
+	height: auto !important;
+	margin: 0 !important;
+	padding: 1rem 1.6rem 1rem 1.4rem;
+	border-radius: 999px;
+	background: rgba(21, 21, 21, 0.42);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	-webkit-backdrop-filter: blur(12px);
+	backdrop-filter: blur(12px);
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+	transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+header .menu-toggle:hover,
+header .menu-toggle:focus {
+	background: rgba(21, 21, 21, 0.62);
+	border-color: rgba(196, 163, 216, 0.55);
+}
+header .menu-toggle-label {
+	display: inline-block;
+	font-family: "poppins-medium", sans-serif;
+	font-size: 1.25rem;
+	line-height: 1;
+	letter-spacing: 0.12rem;
+	text-transform: uppercase;
+	color: #ffffff;
+	font: inherit;
+	text-shadow: none;
+}
+
+/* Hamburger bars (only .menu-toggle-bars — not the label) */
+header .menu-toggle span {
+	/* reset theme rules that target every span */
+	background: transparent !important;
+	width: auto;
+	height: auto;
+	margin: 0;
+	position: static;
+	font: inherit;
+	color: inherit;
+	text-shadow: none;
+}
+header .menu-toggle span::before,
+header .menu-toggle span::after {
+	content: none !important;
+	display: none !important;
+}
+header .menu-toggle-bars {
+	display: block !important;
+	position: relative !important;
+	width: 18px !important;
+	height: 2px !important;
+	background-color: #c4a3d8 !important;
+	border-radius: 2px;
+	flex: 0 0 auto;
+}
+header .menu-toggle-bars::before,
+header .menu-toggle-bars::after {
+	content: "" !important;
+	display: block !important;
+	position: absolute !important;
+	left: 0 !important;
+	width: 100% !important;
+	height: 100% !important;
+	background-color: #c4a3d8 !important;
+	border-radius: 2px;
+	transition: transform 0.2s ease, top 0.2s ease, bottom 0.2s ease;
+}
+header .menu-toggle-bars::before {
+	top: -6px !important;
+}
+header .menu-toggle-bars::after {
+	bottom: -6px !important;
+	top: auto !important;
+}
+header .menu-toggle.is-clicked .menu-toggle-bars {
+	background-color: transparent !important;
+}
+header .menu-toggle.is-clicked .menu-toggle-bars::before {
+	top: 0 !important;
+	transform: rotate(45deg);
+}
+header .menu-toggle.is-clicked .menu-toggle-bars::after {
+	bottom: 0 !important;
+	transform: rotate(-45deg);
+}
+
+/* Dropdown panel under the pill */
+header #main-nav-wrap {
+	top: calc(100% + 0.8rem);
+	left: 0;
+	width: min(26rem, calc(100vw - 3rem));
+}
+header .main-navigation {
+	background: rgba(21, 21, 21, 0.92) !important;
+	border: 1px solid rgba(255, 255, 255, 0.14);
+	border-radius: 12px;
+	padding: 1.2rem 1.6rem 1.6rem !important;
+	-webkit-backdrop-filter: blur(14px);
+	backdrop-filter: blur(14px);
+	box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+}
+header .main-navigation li a {
+	padding: 1rem 0.4rem !important;
+	border-radius: 6px;
+}
+header .main-navigation li a:hover {
+	padding-left: 0.8rem !important;
+	background: rgba(124, 82, 149, 0.18);
+}
+
+@media only screen and (max-width: 600px) {
+	header .top-bar {
+		left: 1.2rem !important;
+		top: 1.2rem !important;
+	}
+	header .menu-toggle {
+		padding: 0.9rem 1.3rem 0.9rem 1.2rem;
+	}
+}
+
 /* Prefer reduced motion */
 @media (prefers-reduced-motion: reduce) {
 	*,
