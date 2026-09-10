@@ -96,6 +96,53 @@ body {
 	text-align: center;
 }
 
+/* Services CTA: long label needs room + true centering */
+#services .button-section {
+	text-align: center;
+	margin-top: 1.2rem;
+}
+#services .button-section .col-twelve {
+	float: none;
+	width: 100%;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+}
+#services .button-section .button,
+#services .button-section .button:first-child {
+	width: auto !important;
+	max-width: 100%;
+	min-width: 28rem;
+	height: auto !important;
+	line-height: 1.35 !important;
+	white-space: normal;
+	padding: 1.6rem 3.2rem !important;
+	margin: 0 auto !important;
+	display: inline-block;
+	text-align: center;
+	background: #7c5295 !important;
+	color: #ffffff !important;
+	border: none;
+	border-radius: 6px;
+}
+#services .button-section .button span {
+	display: inline;
+	white-space: normal;
+}
+#services .button-section .button:hover,
+#services .button-section .button:focus {
+	background: #5e3d74 !important;
+	color: #ffffff !important;
+}
+@media only screen and (max-width: 600px) {
+	#services .button-section .button,
+	#services .button-section .button:first-child {
+		min-width: 0;
+		width: 100% !important;
+		padding: 1.4rem 2rem !important;
+	}
+}
+
 /* Dark sections: lighter body text */
 #intro,
 #services,
