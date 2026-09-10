@@ -590,67 +590,49 @@
 		<div class="col-twelve">
 
 			<h5>Portfolio</h5>
-			<h1>Selected work &amp; background projects.</h1>
-			<p class="lead">Consulting case studies coming soon (anonymized). Below: earlier personal project.</p>
+			<h1>Anonymous case studies.</h1>
+			<p class="lead">Real work, anonymized — problem → actions → outcome. No client names, no proprietary detail.</p>
 
 		</div>			  
 	</div> <!-- /section-intro--> 
 
-	<div class="row portfolio-content">
+	<div class="row about-content">
 
+		<div class="col-four tab-full">
+			<h3>01 · Modular Terraform on GCP</h3>
+			<p><strong>Context:</strong> B2B SaaS product infra growing faster than the IaC layout.</p>
+			<p><strong>Problem:</strong> duplicated Terraform, weak conventions, hard to scale environments safely.</p>
+			<p><strong>Actions:</strong> refactored toward reusable modules; defined shared infra/code conventions; improved environment layout and handoffs for eng teams.</p>
+			<p><strong>Outcome:</strong> clearer ownership, faster reuse of modules, platform easier to extend without copy-paste drift.</p>
+			<p><em>Stack: GCP · Terraform · CI/CD</em></p>
+		</div>
+
+		<div class="col-four tab-full">
+			<h3>02 · Multi-cloud ops referent</h3>
+			<p><strong>Context:</strong> high-traffic digital platform on AWS + GCP + Kubernetes.</p>
+			<p><strong>Problem:</strong> infra questions and incidents bounced across teams; scaling was partly manual.</p>
+			<p><strong>Actions:</strong> acted as technical point of contact; automated provisioning/scaling with Terraform &amp; CloudFormation; coached teams on day-to-day platform practice.</p>
+			<p><strong>Outcome:</strong> less operational toil, more repeatable scaling, single clear escalation path for infra.</p>
+			<p><em>Stack: AWS · GCP · Kubernetes · Terraform · CloudFormation</em></p>
+		</div>
+
+		<div class="col-four tab-full">
+			<h3>03 · CI/CD &amp; AWS automation</h3>
+			<p><strong>Context:</strong> engineering org needing faster, safer cloud changes.</p>
+			<p><strong>Problem:</strong> pipelines and provisioning slowed delivery; uneven automation quality.</p>
+			<p><strong>Actions:</strong> hardened Jenkins pipelines; automated AWS resources with Terraform/CloudFormation; documented repeatable flows for the team.</p>
+			<p><strong>Outcome:</strong> more predictable deploys and provisioning; foundation for later multi-cloud platform work.</p>
+			<p><em>Stack: AWS · Jenkins · Terraform · CloudFormation · Linux</em></p>
+		</div>
+
+	</div>
+
+	<div class="row about-content" style="margin-top: 2rem;">
 		<div class="col-twelve">
+			<p class="lead">Want something similar for your team? See <a class="smoothscroll" href="#services">Services</a> or <a class="smoothscroll" href="#contact">contact me</a>.</p>
+		</div>
+	</div>
 
-			<!-- portfolio-wrapper -->
-		 <div id="folio-wrapper" class="block-1-2 block-mob-full stack">
-
-			 <div class="bgrid folio-item">
-				<div class="item-wrap">
-					<img src="images/portfolio/EvilTwinBanner.png" alt="Liberty">
-				  <a href="#modal-01" class="overlay">												 
-					 <div class="folio-item-table">
-						 <div class="folio-item-cell">
-									<h3 class="folio-title">Evil Twin</h3>											
-									  <span class="folio-types">
-											Game Development
-									</span>
-								</div>										
-					 </div>						  
-				  </a>
-				</div>						 
-				</div> <!-- /folio-item -->
-
-			<!-- modal popups - begin
-			============================================================= -->
-			<div id="modal-01" class="popup-modal slider mfp-hide">	 
-
-					 <div class="media">
-						 <img src="images/portfolio/modals/m-EvilTwinBanner.png" alt="" />
-					 </div>			 
-
-					<div class="description-box">
-					  <h4>Evil Twin</h4>				  
-					  <p>A 2D mixed game, proposing epic experiences between a platformer and a rhythm game.</p>
-
-					  <div class="categories">Game Development</div>									
-					</div>
-
-				 <div class="link-box">
-					<a href="https://youtu.be/sdnU4X7rStU">Details</a>
-					  <a href="#" class="popup-modal-dismiss">Close</a>
-				 </div>				  
-
-				</div> <!-- /modal-01 -->
-
-
-				<!-- modal popups - end
-			============================================================= -->
-
-		 </div> <!-- /portfolio-wrapper --> 
-
-		</div>  <!-- /twelve -->	
-
-	</div> <!-- /portfolio-content --> 
-	
 </section> <!-- /portfolio --> 
 
 	<!-- stats Section
