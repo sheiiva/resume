@@ -726,15 +726,17 @@ header .menu-toggle {
 	gap: 1rem;
 	width: auto !important;
 	height: auto !important;
+	min-height: 4.4rem;
 	margin: 0 !important;
 	padding: 1rem 1.8rem 1rem 1.5rem;
 	border-radius: 999px;
-	background: rgba(255, 255, 255, 0.92) !important;
+	background: rgba(255, 255, 255, 0.95) !important;
 	border: 1px solid rgba(255, 255, 255, 0.95) !important;
 	-webkit-backdrop-filter: blur(12px);
 	backdrop-filter: blur(12px);
 	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
 	color: #1a1a1a !important;
+	overflow: visible;
 	transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 header .menu-toggle:hover,
@@ -743,68 +745,97 @@ header .menu-toggle:focus {
 	border-color: #c4a3d8 !important;
 	color: #1a1a1a !important;
 }
+
+/* Kill theme hamburger pseudos on the label only */
 header .menu-toggle-label {
 	display: inline-block !important;
 	position: static !important;
+	right: auto !important;
+	left: auto !important;
+	top: auto !important;
+	bottom: auto !important;
+	width: auto !important;
+	height: auto !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	background: transparent !important;
 	font-family: "poppins-medium", sans-serif !important;
 	font-size: 1.35rem !important;
 	line-height: 1 !important;
 	letter-spacing: 0.14rem !important;
 	text-transform: uppercase !important;
 	color: #1a1a1a !important;
-	background: transparent !important;
-	width: auto !important;
-	height: auto !important;
-	margin: 0 !important;
-	padding: 0 !important;
 	text-shadow: none !important;
+	transform: none !important;
+}
+header .menu-toggle-label::before,
+header .menu-toggle-label::after {
+	content: none !important;
+	display: none !important;
+	width: 0 !important;
+	height: 0 !important;
+	background: none !important;
+	transform: none !important;
 }
 
-/* Hamburger bars only — do not style the label span */
+/* Compact hamburger / X — 18×14 icon box */
 header .menu-toggle-bars {
 	display: block !important;
 	position: relative !important;
+	right: auto !important;
+	left: auto !important;
+	top: auto !important;
+	bottom: auto !important;
 	width: 18px !important;
 	height: 2px !important;
 	margin: 0 !important;
 	padding: 0 !important;
+	flex: 0 0 18px !important;
+	align-self: center;
 	background-color: #7c5295 !important;
 	border-radius: 2px;
-	flex: 0 0 auto;
 	font: 0/0 a !important;
 	color: transparent !important;
 	text-shadow: none !important;
+	transform: none !important;
 }
-header .menu-toggle-bars::before,
-header .menu-toggle-bars::after {
+header .menu-toggle > .menu-toggle-bars::before,
+header .menu-toggle > .menu-toggle-bars::after {
 	content: "" !important;
 	display: block !important;
 	position: absolute !important;
 	left: 0 !important;
-	width: 100% !important;
-	height: 100% !important;
+	width: 18px !important;
+	height: 2px !important;
 	background-color: #7c5295 !important;
 	border-radius: 2px;
-	transition: transform 0.2s ease, top 0.2s ease, bottom 0.2s ease;
+	transition: top 0.2s ease, transform 0.2s ease;
 }
-header .menu-toggle-bars::before {
+header .menu-toggle > .menu-toggle-bars::before {
 	top: -6px !important;
 	bottom: auto !important;
+	transform: none;
 }
-header .menu-toggle-bars::after {
-	bottom: -6px !important;
-	top: auto !important;
+header .menu-toggle > .menu-toggle-bars::after {
+	top: 6px !important;
+	bottom: auto !important;
+	transform: none;
 }
+
+/* Open: small X only (no giant overlay) */
 header .menu-toggle.is-clicked .menu-toggle-bars {
 	background-color: transparent !important;
 }
-header .menu-toggle.is-clicked .menu-toggle-bars::before {
+header .menu-toggle.is-clicked > .menu-toggle-bars::before {
 	top: 0 !important;
 	transform: rotate(45deg);
 }
-header .menu-toggle.is-clicked .menu-toggle-bars::after {
-	bottom: 0 !important;
+header .menu-toggle.is-clicked > .menu-toggle-bars::after {
+	top: 0 !important;
 	transform: rotate(-45deg);
+}
+header .menu-toggle.is-clicked .menu-toggle-label {
+	color: #1a1a1a !important;
 }
 
 /* Dropdown panel under the pill */
