@@ -275,6 +275,47 @@ a.button:focus {
 	color: #c4a3d8;
 }
 
+/* Hero: role + stack as two lines (not pipe-separated boxes) */
+.intro-content .intro-position {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.6rem;
+	margin-bottom: 1.2rem;
+}
+.intro-content .intro-position span::before,
+.intro-content .intro-position span::after {
+	content: none !important;
+	display: none !important;
+	padding: 0 !important;
+}
+.intro-content .intro-position .intro-role {
+	display: block;
+	color: #ffffff;
+	font-family: "poppins-medium", sans-serif;
+	font-size: 2rem;
+	line-height: 1.35;
+	letter-spacing: 0.12rem;
+	text-transform: none;
+}
+.intro-content .intro-position .intro-stack {
+	display: block;
+	color: #c4a3d8;
+	font-size: 1.4rem;
+	line-height: 1.4;
+	letter-spacing: 0.08rem;
+	text-transform: none;
+	opacity: 0.95;
+}
+@media only screen and (max-width: 768px) {
+	.intro-content .intro-position .intro-role {
+		font-size: 1.6rem;
+	}
+	.intro-content .intro-position .intro-stack {
+		font-size: 1.2rem;
+	}
+}
+
 /* Prefer reduced motion */
 @media (prefers-reduced-motion: reduce) {
 	*,
