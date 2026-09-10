@@ -80,6 +80,22 @@ body {
 	}
 }
 
+#portfolio .portfolio-cta {
+	width: 94%;
+	max-width: none;
+	margin: 3rem auto 0;
+	text-align: center;
+}
+#portfolio .portfolio-cta .col-twelve {
+	float: none;
+	width: 100%;
+	padding: 0;
+}
+#portfolio .portfolio-cta .lead {
+	margin: 0 auto;
+	text-align: center;
+}
+
 /* Dark sections: lighter body text */
 #intro,
 #services,
